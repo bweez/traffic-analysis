@@ -1,0 +1,23 @@
+{
+  "name": "traffic-analysis",
+  "version": "1.0.0",
+  "description": "Explore the WSDot traffic APIs and Annual reports",
+  "main": "index.js",
+  "dependencies": {
+    "pdfreader": "^1.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bweez/traffic-analysis.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bweez/traffic-analysis/issues"
+  },
+  "homepage": "https://github.com/bweez/traffic-analysis#readme"
+}
