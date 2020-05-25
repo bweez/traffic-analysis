@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "b0223589-b394-4e3b-a84f-e1c7ad5db15a",
+		"name": "WSDot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Travel Time",
+			"item": [
+				{
+					"name": "Get available all travel times",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.wsdot.wa.gov/Traffic/api/TravelTimes/TravelTimesREST.svc/GetTravelTimesAsJson?AccessCode={{ACCESSCODE}}",
+							"protocol": "http",
+							"host": [
+								"www",
+								"wsdot",
+								"wa",
+								"gov"
+							],
+							"path": [
+								"Traffic",
+								"api",
+								"TravelTimes",
+								"TravelTimesREST.svc",
+								"GetTravelTimesAsJson"
+							],
+							"query": [
+								{
+									"key": "AccessCode",
+									"value": "{{ACCESSCODE}}"
+								}
+							]
+						},
+						"description": "Travel times for heavily used routes from WSDOT"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Traffic flow",
+			"item": [
+				{
+					"name": "Get flow sites",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.wsdot.wa.gov/Traffic/api/TrafficFlow/TrafficFlowREST.svc/GetTrafficFlowsAsJson?AccessCode={{ACCESSCODE}}",
+							"protocol": "http",
+							"host": [
+								"www",
+								"wsdot",
+								"wa",
+								"gov"
+							],
+							"path": [
+								"Traffic",
+								"api",
+								"TrafficFlow",
+								"TrafficFlowREST.svc",
+								"GetTrafficFlowsAsJson"
+							],
+							"query": [
+								{
+									"key": "AccessCode",
+									"value": "{{ACCESSCODE}}"
+								}
+							]
+						},
+						"description": "TODO: Figure out what the \"FlowReadingValue\" stands for"
+					},
+					"response": []
+				},
+				{
+					"name": "Get specific set of flow data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.wsdot.wa.gov/Traffic/api/TrafficFlow/TrafficFlowREST.svc/SearchTrafficFlowsAsJson?AccessCode={{ACCESSCODE}}&StateRoute={{STATEROUTE}}&Region={{REGION}}&SearchStartTime={{SEARCHSTARTTIME}}&SearchEndTime={{SEARCHENDTIME}}&StartingMilepost={{STARTINGMILEPOST}}&EndingMilepost={{ENDINGMILEPOST}}",
+							"protocol": "http",
+							"host": [
+								"www",
+								"wsdot",
+								"wa",
+								"gov"
+							],
+							"path": [
+								"Traffic",
+								"api",
+								"TrafficFlow",
+								"TrafficFlowREST.svc",
+								"SearchTrafficFlowsAsJson"
+							],
+							"query": [
+								{
+									"key": "AccessCode",
+									"value": "{{ACCESSCODE}}"
+								},
+								{
+									"key": "StateRoute",
+									"value": "{{STATEROUTE}}"
+								},
+								{
+									"key": "Region",
+									"value": "{{REGION}}"
+								},
+								{
+									"key": "SearchStartTime",
+									"value": "{{SEARCHSTARTTIME}}"
+								},
+								{
+									"key": "SearchEndTime",
+									"value": "{{SEARCHENDTIME}}"
+								},
+								{
+									"key": "StartingMilepost",
+									"value": "{{STARTINGMILEPOST}}"
+								},
+								{
+									"key": "EndingMilepost",
+									"value": "{{ENDINGMILEPOST}}"
+								}
+							]
+						},
+						"description": "Get specific set of flow data"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
